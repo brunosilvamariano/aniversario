@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Feliz Aniversário Thaynara! 🎂</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Carregamento -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="birthday-cake">
+                <div class="cake-base"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-top"></div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+            <h2 class="loading-text">Preparando uma surpresa especial...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animações de Fundo -->
+    <div id="hearts-container"></div>
+    <div id="confetti-container"></div>
+    <div id="fireworks-container"></div>
+
+    <!-- Player de Música Flutuante -->
+    <div id="music-player" class="music-player">
+        <button id="music-toggle" class="music-btn">
+            <span class="music-icon">🎵</span>
+            <span class="music-text">Play</span>
+        </button>
+        <div class="music-visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <audio id="background-music" loop>
+            <source src="assets/audio/birthday-song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Navegação Elegante -->
+    <nav class="elegant-navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🎂</span>
+                <span class="brand-text">Thaynara</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">🏠 Início</a>
+                <a href="#message" class="nav-link">💝 Mensagem</a>
+                <a href="#memories" class="nav-link">📸 Memórias</a>
+                <a href="#videos" class="nav-link">🎬 Vídeos</a>
+                <a href="#wishes" class="nav-link">🌟 Desejos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">👑</span>
+                <span class="badge-text">Aniversário Especial</span>
+                <span class="badge-icon">👑</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Feliz Aniversário
+            </h1>
+            
+            <h2 class="hero-name rainbow-text">
+                Thaynara!
+            </h2>
+            
+            <p class="hero-subtitle">
+                Hoje celebramos você e toda a alegria que traz ao mundo! ✨
+            </p>
+            
+            <div class="hero-actions">
+                <button class="btn-primary celebration-btn" onclick="startCelebration()">
+                    <span class="btn-icon">🎉</span>
+                    Começar Celebração
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="scroll-text">Role para baixo</span>
+                <div class="scroll-arrow">⬇️</div>
+            </div>
+        </div>
+        
+        <div class="hero-decoration">
+            <div class="floating-element balloon-1">🎈</div>
+            <div class="floating-element balloon-2">🎈</div>
+            <div class="floating-element balloon-3">🎈</div>
+            <div class="floating-element star-1">⭐</div>
+            <div class="floating-element star-2">✨</div>
+            <div class="floating-element heart-1">💖</div>
+        </div>
+    </section>
+
+    <!-- Seção Mensagem Especial -->
+    <section id="message" class="message-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">💝</div>
+                <h2 class="section-title">Uma Mensagem Especial Para Você</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="message-card">
+                <div class="message-content">
+                    <p class="message-text">
+                        Minha formidável, você é uma pessoa incrível que ilumina a vida de todos ao seu redor. 
+                        Seu sorriso contagiante, sua energia positiva e seu coração generoso fazem deste 
+                        mundo um lugar melhor. Hoje celebramos não apenas mais um ano de vida, mas todos 
+                        os momentos especiais que você nos proporciona.
+                    </p>
+                    
+                    <div class="message-signature">
+                        <p class="signature-text">Com muito carinho,</p>
+                        <p class="signature-name">💕 Seu futuro alguma coisa 💕</p>
+                    </div>
+                </div>
+                
+                <div class="message-decoration">
+                    <div class="decoration-heart">💖</div>
+                    <div class="decoration-sparkle">✨</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Galeria de Memórias -->
+    <section id="memories" class="memories-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">📸</div>
+                <h2 class="section-title">Momentos Inesquecíveis</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="memories-grid">
+                <div class="memory-card" data-modal="modal1">
+                    <div class="memory-image">
+                        <img src="/assets/images/thay1.jpg" alt="Risadas Infinitas">
+                        <div class="memory-overlay">
+                            <div class="memory-title">Saindo da rotina</div>
+                            <div class="memory-subtitle">Clique para ver a magia</div>
+                            <div class="memory-icon">👁️</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-card" data-modal="modal2">
+                    <div class="memory-image">
+                        <img src="/assets/images/thay2.jpg" alt="Celebração">
+                        <div class="memory-overlay">
+                            <div class="memory-title">Momento zen</div>
+                            <div class="memory-subtitle">Clique para ver a magia</div>
+                            <div class="memory-icon">👁️</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-card" data-modal="modal3">
+                    <div class="memory-image">
+                        <img src="/assets/images/thay3.jpg" alt="Amizade Verdadeira">
+                        <div class="memory-overlay">
+                            <div class="memory-title">Sorriso fácil</div>
+                            <div class="memory-subtitle">Clique para ver a magia</div>
+                            <div class="memory-icon">👁️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Vídeos Especiais -->
+    <section id="videos" class="videos-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">🎬</div>
+                <h2 class="section-title">Vídeos Especiais</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls poster="assets/images/video-thumb1.jpg">
+                            <source src="/assets/videos/videothay1.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos HTML5.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Mensagem Especial</h3>
+                        <p class="video-description">Uma surpresa preparada com muito carinho</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls poster="assets/images/video-thumb2.jpg">
+                            <source src="assets/videos/videothay3.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos HTML5.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Momentos Divertidos</h3>
+                        <p class="video-description">Relembre os melhores momentos juntos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Timeline de Momentos -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">🛤️</div>
+                <h2 class="section-title">Nossa Jornada</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Primeiro Encontro</h3>
+                        <p>O início de uma amizade especial</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Risadas Infinitas</h3>
+                        <p>Momentos de pura alegria e diversão</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Apoio nos Dias Difíceis</h3>
+                        <p>Sempre presente quando precisamos</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Planos e Sonhos</h3>
+                        <p>Construindo o futuro juntos</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item special">
+                    <div class="timeline-marker special-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Hoje: Seu Aniversário</h3>
+                        <p>Celebrando você e tudo que representa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Desejos Especiais -->
+    <section id="wishes" class="wishes-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">🌟</div>
+                <h2 class="section-title">Desejos Especiais</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="wishes-grid">
+                <div class="wish-card">
+                    <div class="wish-icon">🎂</div>
+                    <h3 class="wish-title">Felicidade Infinita</h3>
+                    <p class="wish-text">
+                        Que sua vida seja sempre repleta de alegria, risadas e momentos 
+                        especiais que aquecem o coração.
+                    </p>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">✨</div>
+                    <h3 class="wish-title">Sonhos Realizados</h3>
+                    <p class="wish-text">
+                        Que todos os seus sonhos se tornem realidade e que você continue 
+                        brilhando como a estrela que é.
+                    </p>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">💖</div>
+                    <h3 class="wish-title">Amor Abundante</h3>
+                    <p class="wish-text">
+                        Que você seja sempre cercada de pessoas que te amam e que 
+                        reconhecem o quão especial você é.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Final -->
+    <section id="final" class="final-section">
+        <div class="container">
+            <div class="final-content">
+                <div class="final-icon">🎉</div>
+                <h2 class="final-title rainbow-text">Parabéns, Thay!</h2>
+                <p class="final-subtitle">Que este novo ano seja o melhor de todos!</p>
+                
+                <button class="btn-final" onclick="finalSurprise()">
+                    <span class="btn-icon">🎆</span>
+                    Surpresa Final!
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais das Memórias -->
+    <div id="modal1" class="memory-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="/assets/images/thay1.jpg" alt="Memória">
+            <div class="modal-text">
+                <h3>Momentos que ficam na memória 😄</h3>
+                <p>Este momento captura a essência da sua energia contagiante, criando memórias que vai guardar para sempre.</p>
+                <div class="modal-hearts">💕 💕 💕</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="memory-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="/assets/images/thay2.jpg" alt="Memória">
+            <div class="modal-text">
+                <h3>Momento delicia 😄</h3>
+                <p>Aquele momento zen, relaxante, você com você sem pensar em nada</p>
+                <div class="modal-hearts">🎉 🎉 🎉</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="memory-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="/assets/images/thay3.jpg" alt="Memória">
+            <div class="modal-text">
+                <h3>Amizade Verdadeira e mais um pouco 👫</h3>
+                <p>A amizade que compartilhamos é um tesouro raro. Obrigado por ser essa pessoa especial que torna cada momento mais significativo e cheio de amor.</p>
+                <div class="modal-hearts">💖 💖 💖</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="memory-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="assets/images/photo4.jpg" alt="Memória">
+            <div class="modal-text">
+                <h3>Sorriso fácil 🌈</h3>
+                <p>Cada aventura ao seu lado é uma nova descoberta. Sua energia e entusiasmo transformam os momentos simples em memórias extraordinárias.</p>
+                <div class="modal-hearts">🌟 🌟 🌟</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Surpresa Final -->
+    <div id="final-surprise-modal" class="surprise-modal">
+        <div class="surprise-content">
+            <div class="surprise-message">
+                <h2>🎉 FELIZ ANIVERSÁRIO THAYNARA! 🎉</h2>
+                <p>Cada aniversário é uma nova página na história da sua vida. Que esta celebração seja apenas o início de um ano repleto de conquistas e felicidade ✨</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
