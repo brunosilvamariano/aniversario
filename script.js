@@ -66,7 +66,7 @@ function startHeartAnimation() {
 }
 
 function createFloatingHeart() {
-    const hearts = ['💖', '💕', '💗', '💝', '💘', '💞'];
+    const hearts = ['💞'];
     const heart = document.createElement('div');
     heart.className = 'floating-heart';
     heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
