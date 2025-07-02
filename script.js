@@ -165,6 +165,31 @@ function startCelebration() {
 }
 
 
+// Função para criar corações especiais
+function createSpecialHearts(count = 10) {
+    const specialHearts = ['💖', '💕', '💗', '💝', '💘', '💞'];
+    
+    for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.textContent = specialHearts[Math.floor(Math.random() * specialHearts.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 1.5 + 1.2) + 'rem';
+            heart.style.color = '#ff6b6b';
+            
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, 5000);
+        }, i * 100);
+    }
+}
+
 // Surpresa Final
 function finalSurprise() {
     // Múltiplos efeitos simultâneos
@@ -175,12 +200,14 @@ function finalSurprise() {
     // Mostrar modal de surpresa
     setTimeout(() => {
         const surpriseModal = document.getElementById('final-surprise-modal');
-        surpriseModal.classList.add('active');
-        
-        // Fechar modal automaticamente após 4 segundos
-        setTimeout(() => {
-            surpriseModal.classList.remove('active');
-        }, 4000);
+        if (surpriseModal) {
+            surpriseModal.classList.add('active');
+            
+            // Fechar modal automaticamente após 4 segundos
+            setTimeout(() => {
+                surpriseModal.classList.remove('active');
+            }, 4000);
+        }
     }, 1000);
     
     // Efeito de tela cheia de corações
