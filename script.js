@@ -167,7 +167,7 @@ function startCelebration() {
 
 // Função para criar corações especiais
 function createSpecialHearts(count = 10) {
-    const specialHearts = ['💖', '💕', '💗', '💝', '💘', '💞'];
+    const specialHearts = [''];
     
     for (let i = 0; i < count; i++) {
         setTimeout(() => {

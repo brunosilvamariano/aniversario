@@ -1277,3 +1277,129 @@ section {
   }
 }
 
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 1rem;
+  }
+  .nav-menu {
+    gap: 1rem;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-name {
+    font-size: 4rem;
+  }
+  .memories-grid, .videos-grid, .wishes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .timeline-content {
+    width: 40%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav-container {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-name {
+    font-size: 3.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+  .message-card {
+    padding: 2rem;
+  }
+  .message-text {
+    font-size: 1rem;
+  }
+  .timeline::before {
+    left: 50%;
+  }
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin: 0;
+    width: 90%;
+  }
+  .timeline-marker {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+  .final-title {
+    font-size: 2.5rem;
+  }
+  .final-subtitle {
+    font-size: 1.2rem;
+  }
+  .btn-final {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+  }
+  .music-player {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-name {
+    font-size: 3rem;
+  }
+  .hero-badge {
+    padding: 0.6rem 1.5rem;
+  }
+  .memories-grid, .videos-grid, .wishes-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .timeline-content {
+    width: 100%;
+  }
+  .memory-modal .modal-content {
+    width: 90%;
+    padding: 1rem;
+  }
+  .memory-modal img {
+    height: 200px;
+  }
+  .surprise-modal .surprise-content {
+    width: 90%;
+    padding: 1rem;
+  }
+  .surprise-modal h2 {
+    font-size: 1.5rem;
+  }
+  .surprise-modal p {
+    font-size: 0.9rem;
+  }
+}
+
+
