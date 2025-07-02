@@ -164,30 +164,6 @@ function startCelebration() {
     }, 500);
 }
 
-// Corações Especiais
-function createSpecialHearts(count) {
-    const specialHearts = ['🎁', '🎊', '🌟', '✨', '🎉'];
-    
-    for (let i = 0; i < count; i++) {
-        setTimeout(() => {
-            const heart = document.createElement('div');
-            heart.className = 'floating-heart';
-            heart.textContent = specialHearts[Math.floor(Math.random() * specialHearts.length)];
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
-            heart.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
-            heart.style.color = '#d4af37';
-            
-            heartsContainer.appendChild(heart);
-            
-            setTimeout(() => {
-                if (heart.parentNode) {
-                    heart.parentNode.removeChild(heart);
-                }
-            }, 5000);
-        }, i * 100);
-    }
-}
 
 // Surpresa Final
 function finalSurprise() {
