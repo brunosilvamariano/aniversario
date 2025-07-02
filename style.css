@@ -1099,7 +1099,6 @@ section {
   font-family: var(--font-secondary);
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: var(--gradient-rainbow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
